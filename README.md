@@ -28,10 +28,18 @@
 ```
 
 ## Installing
-`pip install -e requirements.txt`
+```bash 
+$ pip install -e requirements.txt
+```
 
 ## Training
-`python ./core/train.py`
+```bash
+$ cd core
+$ python train.py
+```
 
 ## Validation
-`python ./core/validate.py`
+```bash
+$ cd core
+$ python ./core/validate.py
+```
