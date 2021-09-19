@@ -14,3 +14,7 @@ TASK_A_MAP = {"NAG": 0, "CAG": 1, "OAG": 2}
 TASK_B_MAP = {"NGEN": 0, "GEN": 1}
 
 MODEL_SAVE_PATH = "../models/"
+
+# test gold file
+TEST_TASK_A = "../input/eng_gold_A.csv"
+TEST_TASK_B = "../input/eng_gold_B.csv"

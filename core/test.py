@@ -1,3 +1,4 @@
+# File for giving test predictions
 # Validation
 import config
 import utils
@@ -7,7 +8,7 @@ import xgboost
 import pandas as pd
 
 
-def validate(
+def test(
     clf_pipe,
     task_name,
     target_map,
@@ -18,10 +19,12 @@ def validate(
 ):
     # Returns Score
     if verbose:
-        print("Validating on Non trained data...")
+        print(f"Testing...{task_name}")
 
-    val_data = config.VAL_TASK
-    df = pd.read_csv(val_data)
+    # Assign Task
+    test_data = config.TEST_TASK_A if task_name == "A" else config.TEST_TASK_B
+
+    df = pd.read_csv(test_data)
 
     X_val, y_val = utils.get_clean_dataset(
         df,
@@ -31,7 +34,6 @@ def validate(
         string_cleaner=string_cleaner,
         seed=seed,
     )
-    print("VECTORIZING")
     # Vectorize
 
     X_val = utils.reshape_training_data(X_val, flatten=flatten)
@@ -39,7 +41,7 @@ def validate(
     y_preds = clf_pipe.predict(X_val)
     y_true = y_val
 
-    # Return classification report
+    # Return classification metrics
     return {
         "f1_weighted": round(metrics.f1_score(y_true, y_preds, average="weighted"), 3)
     }
@@ -54,7 +56,7 @@ if __name__ == "__main__":
     model_name = config.MODEL_SAVE_PATH + "TASK_A_model.pkl"
     task_1_pipe = joblib.load(model_name)
     print(
-        validate(
+        test(
             task_1_pipe,
             "A",
             config.TASK_A_MAP,
@@ -68,7 +70,7 @@ if __name__ == "__main__":
     model_name = config.MODEL_SAVE_PATH + "TASK_B_model.pkl"
     task_1_pipe = joblib.load(model_name)
     print(
-        validate(
+        test(
             task_1_pipe,
             "B",
             config.TASK_B_MAP,

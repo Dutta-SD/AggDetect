@@ -66,10 +66,11 @@ def get_data_and_train_model(
     if verbose:
         print("TRAINING DONE")
 
+    # The model name to save
+    model_name = f"{config.MODEL_SAVE_PATH}TASK_{task_name}_model.pkl"
+
     # Save model
-    joblib.dump(
-        cf_pipe, f"{config.MODEL_SAVE_PATH}TASK_{task_name}_model_final.pkl", compress=1
-    )
+    joblib.dump(cf_pipe, model_name, compress=1)
 
     return {
         "model": cf_pipe,
@@ -100,9 +101,8 @@ if __name__ == "__main__":
         verbose=True,
     )
 
-
     # print params
-    print(model_1_dict['cv_f1_weighted'])
+    print(model_1_dict["cv_f1_weighted"])
 
     model_2_dict = get_data_and_train_model(
         "B",
@@ -113,4 +113,4 @@ if __name__ == "__main__":
     )
 
     # print params
-    print(model_2_dict['cv_f1_weighted'])
+    print(model_2_dict["cv_f1_weighted"])

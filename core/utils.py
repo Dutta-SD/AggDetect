@@ -7,6 +7,9 @@ import nltk
 import re
 import pandas as pd
 
+# nltk download
+nltk.download("stopwords")
+
 
 # Random Number Seeder
 def seed_all(x: int):
