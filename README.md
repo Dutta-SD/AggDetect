@@ -3,45 +3,23 @@
 
 ## Paper Link
 
-## File Structure
-```
-.
-|
-├── core
-│   ├── config.py
-│   ├── __init__.py
-│   ├── models.py
-│   ├── run.sh
-│   ├── test.py
-│   ├── train.py
-│   ├── utils.py
-│   └── validate.py
-├── input
-│   ├── eng_gold_A.csv
-│   ├── eng_gold_B.csv
-│   ├── Final_AUG_Sub-task A_ENGLISH.csv
-│   ├── Final_AUG_Sub-task B_ENGLISH.csv
-│   ├── trac2_eng_dev.csv
-│   ├── trac2_eng_test.csv
-│   └── trac2_eng_train.csv
-├── LICENSE.md
-├── models
-│   ├── TASK_A_model.pkl
-│   └── TASK_B_model.pkl
-├── README.md
-└── requirements.txt
+## Model Pipeline
 
-```
 ## Training and Inference
 * Create a virtual environment. [See here](https://docs.python.org/3/library/venv.html)
+* Clone the repository [See here](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone)
+* Navigate to the cloned repository
 * Install requirements as `pip install -r requirements.txt`
-* Navigate to `/core` directory and set it as your current working directory
+* Navigate to `/core` directory and set it as your _current working directory_
 * run `bash ./run.sh` for train, validation and inference
 
 ## Results (Weighted F1 Score)
 |Team Name(Cited in paper)|Score Sub Task A|Score Sub Task B|
 |--|--|--|
-|hello|jj|kk|
+|Julian|0.802|0.851|
+|abaruah|0.728|0.870|
+|sdhanshu|0.759|0.857|
+|**Our Model**|**0.735**|**0.852**|
 
-
-
+## Analysis
+<!-- Insert Analysis, Confusion Matrix -->
