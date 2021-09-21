@@ -4,6 +4,7 @@
 ## Paper Link
 
 ## Model Pipeline
+<img src='./reports/assets/nn-1.png' width = 500>
 
 ## Training and Inference
 * Create a virtual environment. [See here](https://docs.python.org/3/library/venv.html)
@@ -23,3 +24,4 @@
 
 ## Analysis
 <!-- Insert Analysis, Confusion Matrix -->
+<img src='./reports/assets/heatmap_task_A.png' width = 300><img src='./reports/assets/heatmap_task_B.png' width = 300>
