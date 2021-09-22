@@ -43,7 +43,8 @@ def clean_one_text(text: str) -> str:
 
 
 def get_clean_dataset(
-    df_raw, target_mapping, train=True, task_name="A", string_cleaner=None, seed=0
+    df_raw, target_mapping, train=True, task_name="A", string_cleaner=None, seed=0,
+    shuffle = True,
 ):
     """
     ===============================================================
@@ -59,7 +60,8 @@ def get_clean_dataset(
     """
 
     # Shuffle
-    df_raw = df_raw.sample(frac=1).reset_index()
+    if shuffle:
+        df_raw = df_raw.sample(frac=1).reset_index()
 
     col_str = f"Sub-task {task_name}"
 

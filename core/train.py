@@ -40,7 +40,7 @@ def get_data_and_train_model(
     if verbose:
         print("CLEANING DONE")
 
-    # Get class weights
+    # Get class weights -- DEPRECATED
     weights = np.bincount(y_train)
     weights = {i: weights.sum() / weights[i] for i in range(len(weights))}
 

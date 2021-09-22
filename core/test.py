@@ -33,6 +33,7 @@ def test(
         task_name=task_name,
         string_cleaner=string_cleaner,
         seed=seed,
+        shuffle=False,
     )
     # Vectorize
 
