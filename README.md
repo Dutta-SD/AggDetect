@@ -14,7 +14,7 @@ However, the training time, model size and resource requirements are drastically
 [ACL Anthology Link](https://aclanthology.org/2021.icon-main.60.pdf)
 
 ## Model Pipeline
-![Model_pipeline](./reports/assets/NN_FINAL.png)
+![Model_pipeline](./assets/NN_FINAL.png)
 
 ## Training and Inference
 * Create a virtual environment. [See here](https://docs.python.org/3/library/venv.html)
@@ -34,15 +34,16 @@ However, the training time, model size and resource requirements are drastically
 
 ## Analysis
 <!-- Insert Analysis, Confusion Matrix -->
-<img src='./reports/assets/heatmap_task_A.png' width = 300> 
+<img src='./assets/heatmap_task_A.png' width = 300> 
 
 Task A Confusion Matrix
 
-<img src='./reports/assets/heatmap_task_B.png' width = 300>
+<img src='./assets/heatmap_task_B.png' width = 300>
 
 Task B Confusion Matrix
 
 ## Repository Details
+-`assets` - Images
 - `core` - Code related to training and testing after augmentation
 - `input` - Data Input. Contains train, test and gold data
 - `models` - Serialized Model Files
