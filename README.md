@@ -11,9 +11,10 @@ Our model achieves 0.73 and 0.85 (both Weighted F1 Score) on the 2 prediction ta
 However, the training time, model size and resource requirements are drastically reduced compared to state of the art models, making our proposed pipeline useful for fast inference. We describe the pipeline, examine the results and conduct error analysis to understand the shortcomings of our model.
 
 ## Paper Link
+[ACL Anthology Link](https://aclanthology.org/2021.icon-main.60.pdf)
 
 ## Model Pipeline
-<img src='./reports/assets/nn-1.png' width = 500>
+<img src='./reports/assets/NN_FINAL.png' width = 500>
 
 ## Training and Inference
 * Create a virtual environment. [See here](https://docs.python.org/3/library/venv.html)
@@ -34,3 +35,11 @@ However, the training time, model size and resource requirements are drastically
 ## Analysis
 <!-- Insert Analysis, Confusion Matrix -->
 <img src='./reports/assets/heatmap_task_A.png' width = 300><img src='./reports/assets/heatmap_task_B.png' width = 300>
+
+## Repository Details
+- `core` - Code related to training and testing after augmentation
+- `input` - Data Input. Contains train, test and gold data
+- `models` - Serialized Model Files
+- `notebooks` - Notebooks done in Google Colab. `notebooks/Data_Augmentation_Aggression_Detection.ipynb` contains detailed code regarding the augmentation process
+- `reports` - .tex files
+- `test_results` - Test CSV file
