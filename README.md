@@ -14,7 +14,7 @@ However, the training time, model size and resource requirements are drastically
 [ACL Anthology Link](https://aclanthology.org/2021.icon-main.60.pdf)
 
 ## Model Pipeline
-![Model_pipeline](./assets/NN_FINAL.png)
+[Model_pipeline](./assets/NN_FINAL.png)
 
 ## Training and Inference
 * Create a virtual environment. [See here](https://docs.python.org/3/library/venv.html)
