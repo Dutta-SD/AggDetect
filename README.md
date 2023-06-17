@@ -1,5 +1,11 @@
 # An Efficient BERT Aided Pipeline to Detect Aggression and Misogyny
 
+## Try it Out!
+[DEMO - HuggingFace Spaces](https://huggingface.co/spaces/sdutta28/AggDetectApp)
+
+[APP REPO - Gradio Based App](https://github.com/Dutta-SD/AggDetectApp)
+
+## About
 Social media is bustling with ever growing cases of trolling, aggression and hate. A huge amount of data is generated each day which is insurmountable for manual inspection. 
 
 In this work, we propose an efficient and fast pipeline to detect aggression and misogyny in social media texts. We use data from the Second Workshop on Trolling, Aggression and Cyber Bullying for our task. 
@@ -64,8 +70,3 @@ Classes are (left to right and top to bottom)
 - `notebooks` - Notebooks done in Google Colab. `notebooks/Data_Augmentation_Aggression_Detection.ipynb` contains detailed code regarding the augmentation process
 - `reports` - .tex files
 - `test_results` - Test CSV file
-
-## Try it Out!
-``` Due to python version issues in huggingface spaces, the link is broken. Will be updated. Redirects to top of README.md now ```
-
-[Click Here](#an-efficient-bert-aided-pipeline-to-detect-aggression-and-misogyny)
